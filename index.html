@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Plans — your daily tasks</title><link rel="stylesheet" href="/style.css"><script type="module" src="/app.mjs"></script></head>
+<body><main class="wrap">
+<p class="date" id="date"></p>
+<p id="error" role="alert" hidden></p>
+<section id="welcome">
+<h1>Your plans,<br>your space.</h1>
+<p>Choose your profile or create one to start planning.</p>
+<div id="profiles"></div>
+<form id="profile-form" class="account"><label for="name">New profile name</label><input id="name" maxlength="30" required autocomplete="off"><button class="btn" type="submit">Create profile</button></form>
+</section>
+<section id="dashboard" hidden>
+<p class="date">Your personal task list</p><h1 id="greeting"></h1>
+<form id="add-form" class="add"><input id="title" maxlength="200" placeholder="Add a task" aria-label="New task" required><button class="btn" type="submit">Add task</button></form>
+<nav class="filters" aria-label="Filter tasks"><button data-filter="all">All</button><button data-filter="todo">To do</button><button data-filter="done">Done</button></nav>
+<ul id="tasks"></ul><div class="foot"><span id="count"></span><div><button id="clear" class="link">Clear done</button><button id="switch" class="link">Switch profile</button></div></div>
+</section>
+<p class="local-note">Saved only in this browser. Profiles separate your lists, but anyone using this browser can open them. Clearing site data removes your profiles and tasks.</p>
+<noscript>Enable JavaScript to use Plans.</noscript>
+</main></body></html>
